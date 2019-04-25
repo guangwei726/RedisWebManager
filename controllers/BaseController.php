@@ -53,7 +53,7 @@ class BaseController extends Controller
 	public function connectRedis(){
 		/** @var Client $redis */
 		$redis = Yii::$app->get('redis');
-		$password = $redis->password ?? '';
+		$password = $redis-servers['password'] ?? '';
 		if($password){
 			// $redis->auth($password);
 		}
